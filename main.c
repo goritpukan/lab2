@@ -1,21 +1,11 @@
 #include <stdio.h>
-#include <math.h>
+#include "calculations.h"
 
 void handleInputErrorWithType();
 
 void handleInputErrorWithValue();
 
 int validate(float sideA, float sideB, float sideC);
-
-float calculateArea(float sideA, float sideB, float sideC);
-
-float calculatePerimeter(float sideA, float sideB, float sideC);
-
-float calculateHeight(float side, float area);
-
-float calculateMedian(float sideA, float sideB, float sideC);
-
-float calculateBisector(float sideA, float sideB, float sideC);
 
 
 int main(void) {
@@ -26,15 +16,11 @@ int main(void) {
     float sideAMedian = 0, sideBMedian = 0, sideCMedian = 0;
     float sideABisector = 0, sideBBisector = 0, sideCBisector = 0;
 
-    unsigned char loop = 1;
-
-
-    printf(
-        "This is a program that calculates area, perimeter, heights, bisectors and medians of a triangle by the entered sides\n");
+    printf("This is a program that calculates area, perimeter, heights, bisectors and medians of a triangle by the entered sides\n");
     printf("Program can calculate triangles with sides between 0.001 and 1000\n");
 
 
-    while (loop) {
+    while (1) {
         printf("\nEnter side of triangle A: ");
         if (scanf("%f", &sideA) != 1) {
             handleInputErrorWithType();
@@ -102,9 +88,9 @@ int main(void) {
         printf("To stop program enter any value, and press \"Enter\"\n");
 
         getchar();
-        if(getchar() == 10) {
+        if (getchar() == 10) {
             continue;
-        }else {
+        } else {
             break;
         }
     }
@@ -131,26 +117,4 @@ int validate(float sideA, float sideB, float sideC) {
         return 1;
     }
     return 0;
-}
-
-float calculateArea(float sideA, float sideB, float sideC) {
-    float p = (sideA + sideB + sideC) / 2;
-    return sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
-}
-
-float calculatePerimeter(float sideA, float sideB, float sideC) {
-    return sideA + sideB + sideC;
-}
-
-float calculateHeight(float side, float area) {
-    return (2 * area) / side;
-}
-
-float calculateMedian(float sideA, float sideB, float sideC) {
-    return sqrt(2 * pow(sideB, 2) + 2 * pow(sideC, 2) - pow(sideA, 2)) / 2;
-}
-
-float calculateBisector(float sideA, float sideB, float sideC) {
-    float p = (sideA + sideB + sideC) / 2;
-    return 2 * sqrt(sideB * sideC * p * (p - sideA)) / (sideB + sideC);
 }
