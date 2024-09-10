@@ -50,13 +50,13 @@ int main(void) {
         if (validate(sideA, sideB, sideC) == 1) {
             continue;
         }
-        printf("\nEnter number of decimal places(0 - 12): ");
+        printf("\nEnter number of decimal places(0 - 15): ");
         if (scanf("%hhu", &decimalPlaces) != 1) {
             handleInputErrorWithType();
             continue;
         }
-        if (decimalPlaces == 0 || decimalPlaces > 12) {
-            handleInputErrorWithValue(0, 12);
+        if (decimalPlaces == 0 || decimalPlaces > 15) {
+            handleInputErrorWithValue(0, 15);
             continue;
         }
 
@@ -76,9 +76,8 @@ int main(void) {
         sideCBisector = calculateBisector(sideC, sideA, sideB);
 
 
-        printf("decimal: %hhu\n", decimalPlaces);
         printf("Perimeter: %.*lf\n", decimalPlaces, perimeter);
-        printf("Area: %f\n", area);
+        printf("Area: %.*lf\n", decimalPlaces, area);
 
         printf("Height(a): %.*lf\n", decimalPlaces, sideAHeight);
         printf("Height(b): %.*lf\n", decimalPlaces, sideBHeight);
