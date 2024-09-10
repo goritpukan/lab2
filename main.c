@@ -50,13 +50,13 @@ int main(void) {
         if (validate(sideA, sideB, sideC) == 1) {
             continue;
         }
-        printf("\nEnter number of decimal places(0 - 15): ");
+        printf("\nEnter number of decimal places(0 - 12): ");
         if (scanf("%hhu", &decimalPlaces) != 1) {
             handleInputErrorWithType();
             continue;
         }
-        if (decimalPlaces == 0 || decimalPlaces > 15) {
-            handleInputErrorWithValue(0, 15);
+        if (decimalPlaces == 0 || decimalPlaces > 12) {
+            handleInputErrorWithValue(0, 12);
             continue;
         }
 
