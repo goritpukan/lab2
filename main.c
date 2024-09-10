@@ -12,8 +12,7 @@ int main(void) {
 
     unsigned char decimalPlaces = 0;
 
-    printf(
-        "This is a program that calculates area, perimeter, heights, bisectors and medians of a triangle by the entered sides\n");
+    printf("This is a program that calculates area, perimeter, heights, bisectors and medians of a triangle by the entered sides\n");
     printf("Program can calculate triangles with sides between 0.001 and 1000\n");
 
 
