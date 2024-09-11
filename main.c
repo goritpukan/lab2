@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "./include//calculations.h"
+#include "./include/calculations.h"
 #include "./include/validation.h"
 
 int main(void) {
