@@ -50,13 +50,13 @@ int main(void) {
         if (validate(sideA, sideB, sideC) == 1) {
             continue;
         }
-        printf("\nEnter number of decimal places(0 - 12): ");
+        printf("\nEnter number of decimal places(1 - 12): ");
         if (scanf("%hhu", &decimalPlaces) != 1) {
             handleInputErrorWithType();
             continue;
         }
         if (decimalPlaces == 0 || decimalPlaces > 12) {
-            handleInputErrorWithValue(0, 12);
+            handleInputErrorWithValue(1, 12);
             continue;
         }
 
@@ -94,14 +94,13 @@ int main(void) {
         printf("To enter new value press \"Enter\"\n");
         printf("To stop program enter any value, and press \"Enter\"\n");
 
-        getchar();
+        while (getchar() != '\n');
         if (getchar() == 10) {
             continue;
         } else {
             break;
         }
     }
-
 
     return 0;
 }

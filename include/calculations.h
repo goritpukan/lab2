@@ -4,12 +4,12 @@
 //function prototype
 double calculateArea(double sideA, double sideB, double sideC);
 
-double calculatePerimeter(float sideA, float sideB, float sideC);
+double calculatePerimeter(double sideA, double sideB, double sideC);
 
-double calculateHeight(float side, float area);
+double calculateHeight(double side, double area);
 
-double calculateMedian(float sideA, float sideB, float sideC);
+double calculateMedian(double sideA, double sideB, double sideC);
 
-double calculateBisector(float sideA, float sideB, float sideC);
+double calculateBisector(double sideA, double sideB, double sideC);
 
 #endif

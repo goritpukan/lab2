@@ -4,13 +4,13 @@
 void handleInputErrorWithType() {
     printf("\nInvalid input type!");
     printf("\nPlease, try again!");
-    while (getchar() != '\n'); //Clear input buffer
+    while (getchar() != '\n');
 }
 
 void handleInputErrorWithValue(float min, int max) {
     printf("\nSide value must be between %.3f and %d", min, max);
     printf("\nPlease, try again!");
-    while (getchar() != '\n'); //Clear input buffer
+    while (getchar() != '\n');
 }
 
 int validate(float sideA, float sideB, float sideC) {

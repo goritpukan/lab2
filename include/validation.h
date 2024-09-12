@@ -1,6 +1,5 @@
 #ifndef VALIDATION_H
 #define VALIDATION_H
-//function prototype
 
 void handleInputErrorWithType();
 
